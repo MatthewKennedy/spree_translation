@@ -16,15 +16,19 @@ Introduction goes here.
     bundle install
     ```
 
-3. Copy & run migrations
-
-    ```ruby
-    bundle exec rails g spree_translations:install
-    ```
-
-4. Restart your server
+3. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
+
+## Adding New Translations
+
+Login to translation.io, find the required language youj wish to edit add translations.
+
+from the root of this extention locally run command:
+
+`bundle exec rake translation_sync_and_purge`
+
+This will then push your online changes to the local locale.yml file.
 
 ## Testing
 

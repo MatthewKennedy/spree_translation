@@ -19,3 +19,13 @@ task :test_app do
   ENV['LIB_NAME'] = 'spree_translations'
   Rake::Task['extension:test_app'].invoke
 end
+
+desc 'Sync Translation Files'
+task :translation_sync do
+  exec "cd translation_dummy &&  bundle exec rake translation:sync"
+end
+
+desc 'Sync & Purge Translation Files'
+task :translation_sync_and_purge do
+  exec "cd translation_dummy &&  bundle exec rake translation:sync_and_purge"
+end
