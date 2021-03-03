@@ -15,6 +15,7 @@ pkg
 *.sw?
 spec/dummy
 translation_dummy/log/*
+translation_dummy/db/*
 .rvmrc
 .sass-cache
 public/spree
