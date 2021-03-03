@@ -22,13 +22,15 @@ Introduction goes here.
 
 ## Adding New Translations
 
-Login to translation.io, find the required language youj wish to edit add translations.
+1. Login to translation.io, find the required language you wish to edit, and add your translations.
 
-from the root of this extention locally run command:
+2. From the root of this extention run command:
 
-`bundle exec rake translation_sync_and_purge`
+```shell
+bundle exec rake translation_sync_and_purge
+```
 
-This will then push your online changes to the local locale.yml file.
+This will then pull any changes you made online to the locale.yml files in this extension.
 
 ## Testing
 
