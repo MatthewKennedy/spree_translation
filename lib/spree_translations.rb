@@ -1,0 +1,5 @@
+require 'spree_core'
+require 'spree_extension'
+require 'spree_translations/engine'
+require 'spree_translations/version'
+require 'translation'
