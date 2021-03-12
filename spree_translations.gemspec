@@ -22,11 +22,13 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   spree_version = '>= 4.2.0', '< 6.0'
-  s.add_dependency 'spree_core', spree_version
-  s.add_dependency 'spree_api', spree_version
-  s.add_dependency 'spree_backend', spree_version
-  s.add_dependency 'spree_extension'
-  s.add_dependency 'translation'
-
+  s.add_development_dependency 'spree_auth_devise'
+  s.add_development_dependency 'spree_core'
+  s.add_development_dependency 'spree_api'
+  s.add_development_dependency 'spree_backend'
+  s.add_development_dependency 'spree_frontend'
+  s.add_development_dependency 'spree_gateway'
+  s.add_development_dependency 'spree_extension'
+  s.add_development_dependency 'translation'
   s.add_development_dependency 'spree_dev_tools'
 end

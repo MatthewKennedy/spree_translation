@@ -2,35 +2,34 @@
 # IF YOU UPDATE IT, YOUR CHANGES WILL BE LOST AT THE NEXT SYNC.
 #
 # To update this file, use this translation interface:
-# https://translation.io/matthewkennedy/spree_translation/no
+# https://translation.io/matthewkennedy/spree_translations/no
 #
 ---
 'no':
+  hello:
   activemodel:
     errors:
       models:
         spree/fulfilment_changer:
           attributes:
             desired_shipment:
-              has_not_enough_stock_at_desired_location: har ikke nok lager på ønsket
-                lagerplassering
-              can_not_transfer_within_same_shipment: kan ikke være det samme som gjeldende
-                forsendelse
+              has_not_enough_stock_at_desired_location:
+              can_not_transfer_within_same_shipment:
             current_shipment:
-              has_already_been_shipped: har allerede blitt sendt
+              has_already_been_shipped:
               can_not_have_backordered_inventory_units:
   activerecord:
     attributes:
       spree/address:
-        label: Adressenavn
+        label:
         address1:
         address2:
         city:
-        company: Selskapet
+        company:
         country:
-        firstname: Fornavn
+        firstname:
         lastname:
-        phone: telefon
+        phone:
         state:
         zipcode:
       spree/calculator/tiered_flat_rate:
@@ -189,7 +188,12 @@
         name:
       doorkeeper/application:
         name:
-        redirect_uri: Omdirigere URI
+        redirect_uri:
+      spree/check:
+        account_holder_name:
+        account_holder_type:
+        account_number:
+        routing_number:
     models:
       spree/address:
         one:
@@ -421,6 +425,10 @@
       confirmed: Din konto er aktivert og du er nå innlogget.
       send_instructions: Du vil innen få minutter motta en epost med instruksjoner
         for å aktivere din konto.
+      send_paranoid_instructions: Hvis epostadressen din finnes i vår database vil
+        du innen få minutter motta en epost med instruksjoner for å aktivere din konto.
+      spree_user:
+        already_confirmed:
     failure:
       inactive: Din konto er ikke aktivert enda.
       invalid:
@@ -429,6 +437,9 @@
       timeout: Din sesjon er utløpt. Logg inn igjen for å kunne fortsette.
       unauthenticated: Du må logge inn eller registrere deg for å kunne fortsette.
       unconfirmed: Du må bekrefte kontoen din for å kunne fortsette.
+      already_authenticated: Du er allerede logget inn.
+      last_attempt: Du har et forsøk til før din konto blir låst.
+      not_found_in_database:
     mailer:
       confirmation_instructions:
         subject: Bekreftelsesinstruksjoner
@@ -436,6 +447,10 @@
         subject: Nullstilling av passord
       unlock_instructions:
         subject: Gjenåpning av konto
+      email_changed:
+        subject:
+      password_change:
+        subject: Passord endret
     oauth_callbacks:
       failure:
       success:
@@ -443,9 +458,16 @@
       send_instructions: Du vil innen få minutter motta en epost med instruksjoner
         for å gjenåpne din konto.
       unlocked: Din konto er gjenåpnet. Vennligst logg inn for å fortsette.
+      send_paranoid_instructions: Hvis kontoen din eksisterer vil du innen få minutter
+        motta en epost med instruksjoner for å låse den opp.
     user_passwords:
       user:
         cannot_be_blank:
+        send_instructions:
+        updated:
+      spree_user:
+        cannot_be_blank:
+        no_token:
         send_instructions:
         updated:
     user_registrations:
@@ -453,9 +475,44 @@
       inactive_signed_up:
       signed_up:
       updated:
+      signed_up_but_unconfirmed:
     user_sessions:
       signed_in:
       signed_out:
+      already_signed_in:
+      already_signed_out:
+    omniauth_callbacks:
+      failure: Kunne ikke autorisere deg fra %{kind} fordi "%{reason}".
+      success: Vellykket autorisering fra %{kind}.
+    passwords:
+      no_token: Du kan ikke aksessere denne siden uten å bli videresendt fra en epost
+        med intrukssjoner for å tilbakestille passord. Hvis dette er tilfelle, vennligst
+        sørg for at du brukte hele lenken inneholdt i eposten.
+      send_instructions: Du vil innen få minutter motta en epost med instruksjoner
+        for å nullstille passordet ditt.
+      send_paranoid_instructions: Hvis epostadressen din finnes i vår database vil
+        du innen få minutter motta en epost med instruksjoner for å nullstille passordet
+        ditt.
+      updated: Ditt passord er endret og du er nå innlogget.
+      updated_not_active: Ditt passord er endret.
+    registrations:
+      destroyed: Farvel! Din konto er nå slettet. Vi håper å se deg igjen snart.
+      signed_up: Velkommen! Din registrering er vellykket.
+      signed_up_but_inactive: Du er registrert. Vi kan derimot ikke logge deg på siden
+        kontoen din ennå ikke er aktivert.
+      signed_up_but_locked: Du er registrert. Vi kan derimot ikke logge deg på siden
+        kontoen din er låst.
+      signed_up_but_unconfirmed: En epost med en aktiveringslink er sent til din epostadresse.  Vennligst
+        klikk på linken for å aktivere din konto.
+      update_needs_confirmation: Din profil er oppdatert, men vi trenger å bekrefte
+        din nye epost-adresse. Vennligst sjekk din innboks og klikk på lenken inneholdt
+        i eposten for å bekrefte endring av din epost-adresse.
+      updated: Din profil er oppdatert.
+      updated_but_not_signed_in:
+    sessions:
+      signed_in: Du er nå innlogget.
+      signed_out: Du er nå logget ut.
+      already_signed_out: Logget ut
   errors:
     messages:
       already_confirmed: har allerede blitt bekreftet, forsøk å logg inn
@@ -513,6 +570,10 @@
       aspect_ratio_not_landscape:
       aspect_ratio_is_not:
       aspect_ratio_unknown:
+      confirmation_period_expired: må bekreftes innen %{period}, vennligst forespør
+        en ny en
+      expired: har utløpt, vennligst få en ny en
+      email_is_invalid:
     format:
   number:
     human:
@@ -1266,6 +1327,7 @@
       payment:
       resumed:
       returned:
+      payment_confirm:
     order_success:
     order_success_explain:
     order_summary:
@@ -1905,6 +1967,59 @@
         cart:
           wrong_quantity:
           no_coupon_code:
+    admin_login:
+    change_your_password:
+    user_mailer:
+      reset_password_instructions:
+        welcome:
+        instructions_1:
+        instructions_2:
+        instructions_3:
+        button:
+        thanks:
+        store_team:
+      confirmation_instructions:
+        welcome:
+        instructions_1:
+        instructions_2:
+        instructions_3:
+        button:
+        thanks:
+        store_team:
+    check:
+    payment_has_been_cancelled:
+    please_wait_for_confirmation_popup:
+    payment_successfully_authorized:
+    log_entry:
+      braintree:
+        message:
+        status:
+        cc_token:
+        customer_id:
+        cvv_result:
+        avs_result_title:
+        avs_result:
+          message:
+          street_match:
+          postal_match:
+      stripe:
+        message:
+        charge_id:
+        card_id:
+        cvv_result:
+        cvc_check:
+        address_zip_check:
+    stripe:
+      ach:
+        account_holder_name:
+        account_holder_type:
+        routing_number:
+        account_number:
+        verify_account_number:
+        verify_bank_account:
+        first_deposit:
+        second_deposit:
+    bank_transfer:
   date:
     day_names:
     -

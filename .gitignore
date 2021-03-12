@@ -13,6 +13,7 @@ tmp
 nbproject
 pkg
 *.sw?
+dummy
 spec/dummy
 translation_dummy/log/*
 translation_dummy/db/*

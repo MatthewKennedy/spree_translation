@@ -2,10 +2,11 @@
 # IF YOU UPDATE IT, YOUR CHANGES WILL BE LOST AT THE NEXT SYNC.
 #
 # To update this file, use this translation interface:
-# https://translation.io/matthewkennedy/spree_translation/de
+# https://translation.io/matthewkennedy/spree_translations/de
 #
 ---
 de:
+  hello:
   activemodel:
     errors:
       models:
@@ -190,6 +191,11 @@ de:
       doorkeeper/application:
         name: Name
         redirect_uri: Redirect URI
+      spree/check:
+        account_holder_name:
+        account_holder_type:
+        account_number:
+        routing_number:
     models:
       spree/address:
         one: Adresse
@@ -432,56 +438,117 @@ de:
     successfully_created: Neue Adresse wurde erfolgreich erstellt
   devise:
     confirmations:
-      confirmed: Ihr Konto wurde erfolgreich bestätigt. Sie sind jetzt angemeldet.
-      send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit Hinweisen
-        zur Bestätigung Ihres Kontos.
+      confirmed: Ihr Konto wurde erfolgreich aktiviert.
+      send_instructions: In ein paar Minuten erhalten Sie eine E-Mail mit Anweisungen,
+        um Ihr Konto zu aktivieren.
+      send_paranoid_instructions: Falls Ihre E-Mail-Adresse in unserer Datenbank existiert,
+        erhalten Sie in wenigen Minuten eine E-Mail, mit der Sie Ihre Registrierung
+        bestätigen können.
+      spree_user:
+        already_confirmed: Ihre E-Mail wurde bereits bestätigt. Bitte versuchen Sie
+          erneut, sich anzumelden.
     failure:
       inactive: Ihr Konto wurde noch nicht aktiviert.
-      invalid: Ungültige Email Adresse oder Passwort
-      invalid_token: Ungültiges Authentifikationstoken
+      invalid: Ungültige E-Mail-Adresse oder Passwort.
+      invalid_token: Ungültiger Authentifizierungsschlüssel.
       locked: Ihr Konto ist gesperrt.
-      timeout: Ihre Sitzung ist abgelaufen, bitte melden sie sich wieder an um fortzufahren.
-      unauthenticated: Zum Fortfahren müssen Sie sich registrieren oder angemeldet
-        sein.
-      unconfirmed: Sie müssen ihr Konto bestätigen bevor sie fortfahren können.
+      timeout: Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren.
+      unauthenticated: Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren.
+      unconfirmed: Sie müssen Ihre Registrierung bestätigen, bevor Sie fortfahren.
+      already_authenticated: Sie sind bereits angemeldet.
+      last_attempt: Sie haben noch einen Versuch, bis Ihr Konto gesperrt wird.
+      not_found_in_database: "%{authentication_keys} oder Passwort ungültig."
     mailer:
       confirmation_instructions:
-        subject: Bestätigungshinweise
+        subject: Bestätigen Sie Ihre Registrierung
       reset_password_instructions:
-        subject: Anleitung zum Zurücksetzen Ihres Passworts
+        subject: Passwort zurücksetzen
       unlock_instructions:
-        subject: Anleitung zum Entsperren
+        subject: Konto freischalten
+      email_changed:
+        subject: E-Mail-Adresse geändert
+      password_change:
+        subject: Passwort geändert
     oauth_callbacks:
-      failure: Sie konnten nich über %{kind} autorisiert werden, weil %{reason}.
-      success: Erfolgreich mit %{kind} Konto autorisiert.
+      failure: Autorisierung durch %{kind} fehlgeschlagen aufgrund von %{reason}.
+      success: Erfolgreich autorisiert durch %{kind} Konto.
     unlocks:
-      send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit einer Anleitung
-        zum Entsperren Ihres Kontos.
-      unlocked: Ihr Konto wurde erfolgreich entsperrt. Sie sind jetzt angemeldet.
+      send_instructions: In ein paar Minuten erhalten Sie eine E-Mail mit Anweisungen
+        um Ihr Konto freizuschalten.
+      unlocked: Ihr Konto wurde erfolgreich freigeschaltet.
+      send_paranoid_instructions: Falls Ihre E-Mail-Adresse in unserer Datenbank existiert,
+        erhalten Sie in wenigen Minuten eine E-Mail, mit der Anleitung, wie Sie Ihr
+        Konto entsperren können.
     user_passwords:
       user:
         cannot_be_blank: Ihr Passwort darf nicht leer sein.
         send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit einer Anleitung
           zum Zurücksetzen Ihres Passworts.
         updated: Ihr Password wurde erfolgreich geändert. Sie sind jetzt angemeldet.
+      spree_user:
+        cannot_be_blank: Ihr Passwort darf nicht leer sein.
+        no_token: Sie können nicht auf diese Seite zugreifen, wenn Sie den Link aus
+          einer E-Mail zum Zurücksetzen des Kennworts nicht verwenden. Wenn Sie den
+          Link aus einer E-Mail zum Zurücksetzen des Passworts verwenden, stellen
+          Sie bitte sicher, dass Sie die vollständige URL verwendet haben.
+        send_instructions: In ein paar Minuten erhalten Sie eine E-Mail mit Anweisungen
+          um Ihr Passwort zurücksetzen.
+        updated: Ihr Passwort wurde erfolgreich geändert.
     user_registrations:
-      destroyed: Auf Wiedersehen! Ihr Konto wurde erfolgreich gelöscht. Wir hoffen
-        sie bald wieder begrüßen zu dürfen.
-      inactive_signed_up: Sie haben sich erfolgreich registriert. Wir konnten sie
-        aber nicht anmelden, denn %{reason}.
-      signed_up: Willkommen! Sie haben sich erfolgreich registriert.
-      updated: Sie haben ihr Konto erfolgreich aktualisiert.
+      destroyed: Ihr Konto wurde erfolgreich gelöscht. Auf Wiedersehen!
+      inactive_signed_up: Sie haben sich erfolgreich registriert. Wir konnten Sie
+        jedoch nicht anmelden, da Ihr Konto %{reason} ist.
+      signed_up: Herzlich Willkommen! Sie haben sich erfolgreich registriert.
+      updated: Sie haben Ihr Konto erfolgreich aktualisiert.
+      signed_up_but_unconfirmed: Eine Nachricht mit einem Bestätigungslink wurde an
+        Ihre E-Mail-Adresse gesendet. Bitte folgen Sie dem Link, um Ihr Konto zu aktivieren.
     user_sessions:
       signed_in: Erfolgreich angemeldet.
       signed_out: Erfolgreich abgemeldet.
+      already_signed_in: Bereits angemeldet.
+      already_signed_out: Bereits abgemeldet.
+    omniauth_callbacks:
+      failure: Sie konnten nicht mit Ihrem %{kind}-Konto angemeldet werden, weil "%{reason}".
+      success: Sie haben sich erfolgreich mit Ihrem %{kind}-Konto angemeldet.
+    passwords:
+      no_token: Sie können sich nicht auf dieser Seite anmelden, wenn Sie nicht von
+        einer Passwort-Zurücksetzen-E-Mail kommen. Wenn Sie von solch einer E-Mail
+        kommen, überprüfen Sie bitte, ob Sie die gesamte URL verwendet haben.
+      send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit der Anleitung,
+        wie Sie Ihr Passwort zurücksetzen können.
+      send_paranoid_instructions: Falls Ihre E-Mail-Adresse in unserer Datenbank existiert,
+        erhalten Sie in wenigen Minuten eine E-Mail mit der Anleitung, wie Sie Ihr
+        Passwort zurücksetzen können.
+      updated: Ihr Passwort wurde geändert. Sie sind jetzt angemeldet.
+      updated_not_active: Ihr Passwort wurde erfolgreich geändert.
+    registrations:
+      destroyed: Ihr Konto wurde gelöscht. Wir hoffen, dass wir Sie bald wiedersehen.
+      signed_up: Sie haben sich erfolgreich registriert.
+      signed_up_but_inactive: Sie haben sich erfolgreich registriert. Wir konnten
+        Sie jedoch nicht anmelden, weil Ihr Konto noch nicht aktiviert ist.
+      signed_up_but_locked: Sie haben sich erfolgreich registriert. Wir konnten Sie
+        jedoch nicht anmelden, weil Ihr Konto gesperrt ist.
+      signed_up_but_unconfirmed: Sie erhalten in wenigen Minuten eine E-Mail mit einem
+        Link für die Bestätigung der Registrierung. Klicken Sie auf den Link um Ihr
+        Konto zu aktivieren.
+      update_needs_confirmation: Ihre Daten wurden aktualisiert, aber Sie müssen Ihre
+        neue E-Mail-Adresse bestätigen. Sie erhalten in wenigen Minuten eine E-Mail,
+        mit der Sie die Änderung Ihrer E-Mail-Adresse abschließen können.
+      updated: Ihre Daten wurden aktualisiert.
+      updated_but_not_signed_in: Ihre Daten wurden aktualisiert, aber da sich Ihr
+        Passwort geändert hat, müssen Sie sich erneut anmelden
+    sessions:
+      signed_in: Erfolgreich angemeldet.
+      signed_out: Erfolgreich abgemeldet.
+      already_signed_out: Erfolgreich abgemeldet.
   errors:
     messages:
       already_confirmed: wurde bereits bestätigt
       not_found: nicht gefunden
       not_locked: war nicht gesperrt
       not_saved:
-        one: 'Ein Fehler hat das Speichern von %{resource} verhindert:'
-        other: "%{count} Fehler haben das Speichern von %{resource} verhindert:"
+        one: '1 Fehler verhindert das Speichern von %{resource}:'
+        other: "%{count} Fehler verhindern das Speichern von %{resource}:"
       model_invalid: 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
       inclusion: ist kein gültiger Wert
       exclusion: ist nicht verfügbar
@@ -538,6 +605,10 @@ de:
       aspect_ratio_not_landscape:
       aspect_ratio_is_not:
       aspect_ratio_unknown:
+      confirmation_period_expired: musste innerhalb von %{period} bestätigt werden,
+        bitte neu anfordern.
+      expired: ist abgelaufen, bitte neu anfordern
+      email_is_invalid: E-Mail-Adresse darf nicht leer sein
     format: "%{attribute} %{message}"
   number:
     human:
@@ -837,10 +908,10 @@ de:
     country_based: Länder basiert
     country_name: Name
     country_names:
-      CA: Kanada
-      FRA: Frankreich
-      ITA: Italien
-      US: Amerika
+      CA:
+      FRA:
+      ITA:
+      US:
     country_rule:
       label: Wählen Sie muss in dieses Land versendet werden
     coupon: Gutschein
@@ -1062,7 +1133,7 @@ de:
       select_locale: Locale Auswählen
       show_only: Nur Anzeigen
       supported_locales: Unterstützte Locales
-      this_file_language: Deutsch (de)
+      this_file_language: Deutsch (DE)
       translations: Übersetzungen
     icon: Symbol
     image: Bild
@@ -1342,6 +1413,7 @@ de:
       payment: Bezahlung
       resumed: wieder aufgenommen
       returned: zurück erstattet
+      payment_confirm:
     order_success: Bestellung erfolgreich
     order_success_explain: Sie erhalten Ihre Bestellinformationen per E-Mail
     order_summary: Bestellübersicht
@@ -2027,6 +2099,65 @@ de:
         cart:
           wrong_quantity:
           no_coupon_code:
+    admin_login: Admin Login
+    change_your_password: Kennwort zurücksetzen
+    user_mailer:
+      reset_password_instructions:
+        welcome:
+        instructions_1: |-
+          Es wurde eine Anfrage zum Zurücksetzen Ihres Passworts gestellt.
+          Wenn Sie diese Anfrage nicht gestellt haben, ignorieren Sie diese E-Mail.
+
+          Wenn Sie diese Anfrage gestellt haben, klicken Sie bitte auf den folgenden Link:
+        instructions_2: |-
+          Falls die obige URL nicht funktioniert, bitte URL kopieren und in Ihren Browser einfügen
+          Wenn Sie weiterhin Probleme haben, können Sie sich gerne an uns wenden.
+        instructions_3:
+        button:
+        thanks:
+        store_team:
+      confirmation_instructions:
+        welcome: Schön, dass Sie hier sind %{email}
+        instructions_1:
+        instructions_2:
+        instructions_3:
+        button:
+        thanks:
+        store_team:
+    check:
+    payment_has_been_cancelled: Die Zahlung wurde abgebrochen.
+    please_wait_for_confirmation_popup:
+    payment_successfully_authorized:
+    log_entry:
+      braintree:
+        message:
+        status:
+        cc_token:
+        customer_id:
+        cvv_result:
+        avs_result_title:
+        avs_result:
+          message:
+          street_match:
+          postal_match:
+      stripe:
+        message:
+        charge_id:
+        card_id:
+        cvv_result:
+        cvc_check:
+        address_zip_check:
+    stripe:
+      ach:
+        account_holder_name:
+        account_holder_type:
+        routing_number:
+        account_number:
+        verify_account_number:
+        verify_bank_account:
+        first_deposit:
+        second_deposit:
+    bank_transfer:
   date:
     day_names:
     - Sonntag
@@ -2115,7 +2246,7 @@ de:
       year: Jahr
       month: Monat
       day: Tag
-      hour: Stunden
+      hour: Stunde
       minute: Minute
       second: Sekunde
   helpers:
@@ -2298,9 +2429,11 @@ de:
     errors:
       messages:
         invalid_request:
-          unknown:
-          missing_param:
-          request_not_authorized:
+          unknown: Die Anfrage enthält einen nicht-unterstützten Parameter, ein Parameter
+            fehlt oder sie ist anderweitig fehlerhaft.
+          missing_param: 'Missing required parameter: %{value}.'
+          request_not_authorized: Request need to be authorized. Required parameter
+            for authorizing request is missing or invalid.
         invalid_redirect_uri: Der Redirect-URI in der Anfrage ist ungültig.
         unauthorized_client: Der Client ist nicht autorisiert, diese Anfrage mit dieser
           Methode auszuführen.
@@ -2338,7 +2471,7 @@ de:
           expired: Der Access Token ist abgelaufen
           unknown: Der Access Token ist nicht gültig/korrekt
         revoke:
-          unauthorized:
+          unauthorized: Sie sind nicht berechtigt, dieses Token zu widerrufen
     flash:
       applications:
         create:
