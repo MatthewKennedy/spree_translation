@@ -6,7 +6,6 @@
 #
 ---
 de:
-  hello:
   activemodel:
     errors:
       models:
@@ -782,7 +781,6 @@ de:
     are_you_sure_delete: Sind sie sich sicher, dass Sie diesen Eintrag löschen möchten?
     associated_adjustment_closed: Die verknüpfte Anpassung ist geschlossen und wird
       nicht neu berechnet. Möchten Sie die Anpassung öffnen?
-    at_symbol: "@"
     authorization_failure: Bitte authentifizieren Sie sich.
     authorized: Autorisiert
     auto_capture: Automatische Erfassung
@@ -962,9 +960,6 @@ de:
     cvv_response: Verifikationsantwort
     date: Datum
     date_completed: Abschlußdatum
-    date_picker:
-      fpr_human_friendly_date_format: M j, Y
-      fpr_human_friendly_date_time_format: M j, Y um H:i
     date_range: Datum (von/bis)
     default: Standard
     default_country_cannot_be_deleted: Standardland kann nicht gelöscht werden
@@ -1133,7 +1128,6 @@ de:
       select_locale: Locale Auswählen
       show_only: Nur Anzeigen
       supported_locales: Unterstützte Locales
-      this_file_language: Deutsch (DE)
       translations: Übersetzungen
     icon: Symbol
     image: Bild
@@ -2158,51 +2152,6 @@ de:
         first_deposit:
         second_deposit:
     bank_transfer:
-  date:
-    day_names:
-    - Sonntag
-    - Montag
-    - Dienstag
-    - Mittwoch
-    - Donnerstag
-    - Freitag
-    - Samstag
-    abbr_day_names:
-    - So
-    - Mo
-    - Di
-    - Mi
-    - Do
-    - Fr
-    - Sa
-    month_names:
-    -
-    - Januar
-    - Februar
-    - März
-    - April
-    - Mai
-    - Juni
-    - Juli
-    - August
-    - September
-    - Oktober
-    - November
-    - Dezember
-    abbr_month_names:
-    -
-    - Jan
-    - Feb
-    - Mär
-    - Apr
-    - Mai
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Okt
-    - Nov
-    - Dez
   time:
     am: vormittags
     pm: nachmittags

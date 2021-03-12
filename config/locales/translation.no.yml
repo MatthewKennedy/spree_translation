@@ -6,7 +6,6 @@
 #
 ---
 'no':
-  hello:
   activemodel:
     errors:
       models:
@@ -744,7 +743,6 @@
     are_you_sure:
     are_you_sure_delete:
     associated_adjustment_closed:
-    at_symbol:
     authorization_failure:
     authorized:
     auto_capture:
@@ -911,9 +909,6 @@
     cvv_response:
     date:
     date_completed:
-    date_picker:
-      fpr_human_friendly_date_format:
-      fpr_human_friendly_date_time_format:
     date_range:
     default:
     default_country_cannot_be_deleted:
@@ -1061,7 +1056,6 @@
       select_locale:
       show_only:
       supported_locales:
-      this_file_language:
       translations:
     icon:
     image:
@@ -2020,51 +2014,6 @@
         first_deposit:
         second_deposit:
     bank_transfer:
-  date:
-    day_names:
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    abbr_day_names:
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    month_names:
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    abbr_month_names:
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
   time:
     am:
     pm:

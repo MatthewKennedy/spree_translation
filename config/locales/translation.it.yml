@@ -6,7 +6,6 @@
 #
 ---
 it:
-  hello:
   activemodel:
     errors:
       models:
@@ -762,7 +761,6 @@ it:
     are_you_sure_delete: Sei sicuro di voler eliminare questo record?
     associated_adjustment_closed: La variazione associata è chiusa e non verrà ricalcolata.
       Vuoi riaprirla?
-    at_symbol: "@"
     authorization_failure: Autorizzazione Fallita
     authorized: Autorizzato
     auto_capture: Riscossione Automatica
@@ -938,9 +936,6 @@ it:
     cvv_response: Risposta CVV
     date: Data
     date_completed: Completato il
-    date_picker:
-      fpr_human_friendly_date_format: M j, Y
-      fpr_human_friendly_date_time_format: M j, Y a\\l\\le H:i
     date_range: Intervallo di date
     default: Default
     default_country_cannot_be_deleted:
@@ -1105,7 +1100,6 @@ it:
       select_locale: Seleziona lingua
       show_only: Mostra solo
       supported_locales: Lingue Supportate
-      this_file_language: Italiano (IT)
       translations: Traduzioni
     icon: Icona
     image: Immagine
@@ -2109,51 +2103,6 @@ it:
         first_deposit:
         second_deposit:
     bank_transfer:
-  date:
-    day_names:
-    - domenica
-    - lunedì
-    - martedì
-    - mercoledì
-    - giovedì
-    - venerdì
-    - sabato
-    abbr_day_names:
-    - dom
-    - lun
-    - mar
-    - mer
-    - gio
-    - ven
-    - sab
-    month_names:
-    -
-    - gennaio
-    - febbraio
-    - marzo
-    - aprile
-    - maggio
-    - giugno
-    - luglio
-    - agosto
-    - settembre
-    - ottobre
-    - novembre
-    - dicembre
-    abbr_month_names:
-    -
-    - gen
-    - feb
-    - mar
-    - apr
-    - mag
-    - giu
-    - lug
-    - ago
-    - set
-    - ott
-    - nov
-    - dic
   time:
     am: am
     pm: pm

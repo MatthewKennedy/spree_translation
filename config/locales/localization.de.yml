@@ -11,15 +11,6 @@
 #
 ---
 de:
-  date:
-    formats:
-      default: "%d.%m.%Y"
-      long: "%e. %B %Y"
-      short: "%e. %b"
-    order:
-    - :day
-    - :month
-    - :year
   i18n:
     transliterate:
       rule:
@@ -74,3 +65,12 @@ de:
       default: "%A, %d. %B %Y, %H:%M Uhr"
       long: "%A, %d. %B %Y, %H:%M Uhr"
       short: "%d. %B, %H:%M Uhr"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      long: "%e. %B %Y"
+      short: "%e. %b"
+    order:
+    - :day
+    - :month
+    - :year

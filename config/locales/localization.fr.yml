@@ -11,15 +11,6 @@
 #
 ---
 fr:
-  date:
-    formats:
-      default: "%d/%m/%Y"
-      long: "%e %B %Y"
-      short: "%e %b"
-    order:
-    - :day
-    - :month
-    - :year
   i18n:
     transliterate:
       rule:
@@ -85,3 +76,12 @@ fr:
       default: "%d %B %Y %Hh %Mmin %Ss"
       long: "%A %d %B %Y %Hh%M"
       short: "%d %b %Hh%M"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%e %B %Y"
+      short: "%e %b"
+    order:
+    - :day
+    - :month
+    - :year

@@ -14,30 +14,32 @@ task :default do
   Rake::Task[:spec].invoke
 end
 
-desc 'Generates a dummy app for testing'
-task :test_app do
-  ENV['LIB_NAME'] = 'spree_translations'
-  Rake::Task['extension:test_app'].invoke
-end
+namespace :spree_translations do
+  desc 'Generates a dummy app for testing'
+  task :test_app do
+    ENV['LIB_NAME'] = 'spree_translations'
+    Rake::Task['extension:test_app'].invoke
+  end
 
-desc 'Generates a dummy app for translating'
-task :create_translation_dummy_app do
-  ENV['LIB_NAME'] = 'spree_translations'
-  ENV['DUMMY_PATH'] = 'dummy'
-  Rake::Task['extension:test_app'].invoke
- end
+  desc 'Generates a dummy app for translating'
+  task :create_translation_dummy_app do
+    ENV['LIB_NAME'] = 'spree_translations'
+    ENV['DUMMY_PATH'] = 'dummy'
+    Rake::Task['extension:test_app'].invoke
+   end
 
-desc 'copy translation.io into your new dummy app pre usage'
-task :set_up_translation_app do
-  FileUtils.cp 'lib/generators/spree_translations/templates/translation.rb', 'dummy/config/initializers/translation.rb'
-end
+  desc 'copy translation.io into your new dummy app pre usage'
+  task :set_up_translation_app do
+    FileUtils.cp 'lib/generators/spree_translations/templates/translation.rb', 'dummy/config/initializers/translation.rb'
+  end
 
-desc 'Sync Translation Files'
-task :translation_sync do
-  exec "cd dummy &&  bundle exec rake translation:sync"
-end
+  desc 'Sync Translations'
+  task :sync do
+    exec "cd dummy &&  bundle exec rake translation:sync"
+  end
 
-desc 'Sync & Purge Translation Files'
-task :translation_sync_and_purge do
-  exec "cd dummy &&  bundle exec rake translation:sync_and_purge"
+  desc 'Sync & Purge Translations'
+  task :sync_and_purge do
+    exec "cd dummy &&  bundle exec rake translation:sync_and_purge"
+  end
 end

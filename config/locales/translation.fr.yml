@@ -6,7 +6,6 @@
 #
 ---
 fr:
-  hello:
   activemodel:
     errors:
       models:
@@ -786,7 +785,6 @@ fr:
     are_you_sure_delete: Êtes-vous sûr de vouloir supprimer cet enregistrement ?
     associated_adjustment_closed: L'ajustement associé est fermé, et ne sera pas recalculé.
       Voulez-vous l'ouvrir?
-    at_symbol: "@"
     authorization_failure: Vous n'avez pas les droits nécessaires pour afficher cette
       section
     authorized: Autorisé
@@ -968,9 +966,6 @@ fr:
     cvv_response: Réponse du CVV
     date: Date
     date_completed: Date d'achèvement
-    date_picker:
-      fpr_human_friendly_date_format: M j, Y
-      fpr_human_friendly_date_time_format: M j, Y à H:i
     date_range: Sélection de dates
     default: Défaut
     default_country_cannot_be_deleted: Le terrain de base ne peut pas être supprimé
@@ -1136,7 +1131,6 @@ fr:
       select_locale: Sélectionnez vos paramètres régionaux
       show_only: Afficher seulement
       supported_locales: Paramètres régionaux supportés
-      this_file_language: Français (FR)
       translations: Traductions
     icon: Icône
     image: Image
@@ -2159,51 +2153,6 @@ fr:
         first_deposit:
         second_deposit:
     bank_transfer:
-  date:
-    day_names:
-    - dimanche
-    - lundi
-    - mardi
-    - mercredi
-    - jeudi
-    - vendredi
-    - samedi
-    abbr_day_names:
-    - dim
-    - lun
-    - mar
-    - mer
-    - jeu
-    - ven
-    - sam
-    month_names:
-    -
-    - janvier
-    - février
-    - mars
-    - avril
-    - mai
-    - juin
-    - juillet
-    - août
-    - septembre
-    - octobre
-    - novembre
-    - décembre
-    abbr_month_names:
-    -
-    - jan.
-    - fév.
-    - mar.
-    - avr.
-    - mai
-    - juin
-    - juil.
-    - août
-    - sept.
-    - oct.
-    - nov.
-    - déc.
   time:
     am: am
     pm: pm

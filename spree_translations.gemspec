@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.description = 'Add (optional) extension description here'
   s.required_ruby_version = '>= 2.5.0'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
+  s.author    = 'Matthew Kennedy'
+  s.email     = 'm.@kennedy.com'
   s.homepage  = 'https://github.com/your-github-handle/spree_translations'
   s.license = 'BSD-3-Clause'
 
@@ -21,14 +21,15 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 4.2.0', '< 6.0'
-  s.add_development_dependency 'spree_auth_devise'
-  s.add_development_dependency 'spree_core'
+  # Translate Master Versions.
+  s.add_development_dependency 'rails-i18n'
   s.add_development_dependency 'spree_api'
+  s.add_development_dependency 'spree_auth_devise'
   s.add_development_dependency 'spree_backend'
+  s.add_development_dependency 'spree_core'
+  s.add_development_dependency 'spree_dev_tools'
+  s.add_development_dependency 'spree_extension'
   s.add_development_dependency 'spree_frontend'
   s.add_development_dependency 'spree_gateway'
-  s.add_development_dependency 'spree_extension'
   s.add_development_dependency 'translation'
-  s.add_development_dependency 'spree_dev_tools'
 end
