@@ -2,7 +2,7 @@
 
 Simple light weight translations pack for Spree, ask for more languages adding.
 
-This extension uses [trnaslation.io](https://translation.io) to read and translate all of the default en.yml files from each of the following:
+This extension uses [Translation.io](https://translation.io) to read and translate all of the default en.yml files from each of the following:
 
 - rails-i18n
 - spree_api
