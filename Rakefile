@@ -35,11 +35,11 @@ namespace :spree_translations do
 
   desc 'Sync Translations'
   task :sync do
-    exec "cd dummy &&  bundle exec rake translation:sync"
+    exec "bundle exec rake -f dummy/Rakefile translation:sync"
   end
 
   desc 'Sync & Purge Translations'
   task :sync_and_purge do
-    exec "cd dummy &&  bundle exec rake translation:sync_and_purge"
+    exec "bundle exec rake -f dummy/Rakefile translation:sync_and_purge"
   end
 end
